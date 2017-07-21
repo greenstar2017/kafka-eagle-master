@@ -1,0 +1,3 @@
+@echo off
+set "OPTS=-Xmx2g -Xms2g -Xmn1g -XX:PermSize=128m -Xss1000k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 -verbose:gc  -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -Xloggc:jvm.log"
+call java -jar %OPTS% %1%
